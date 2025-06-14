@@ -1,0 +1,224 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Sticky Header */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0 ;
+  width: 100%;
+  background-color: white;
+  color: #00853F;
+  z-index: 1000;
+  padding: 10px 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.sticky-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.logo-img {
+  height: 30px;
+}
+
+.logo-text {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-grow: 1;
+}
+
+/* Barra superior de envío */
+.top-bar {
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  padding: 10px;
+  text-align: center;
+  margin-top: 60px; /* espacio para sticky header */
+}
+
+/* Navegación */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+/* Hero principal */
+.hero {
+  background-color: #00b140;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/45/Benetton_wordmark_background.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.hero button {
+  background-color: #e6007e;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Secciones de categorías */
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 40px auto;
+  padding: 0 20px;
+  gap: 20px;
+}
+
+.category {
+  flex: 1 1 calc(33.333% - 20px);
+  display: block;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.category:hover {
+  transform: scale(1.03);
+}
+
+.category img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.category .label {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+/* Adaptación responsive */
+@media (max-width: 900px) {
+  .category {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .category {
+    flex: 1 1 100%;
+  }
+}
+
+.rainbow-border {
+  border-top: 5px solid;
+  border-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet) 1;
+  margin-bottom: 20px;
+}
+.footer {
+  background-color: #f5f5f5;
+  padding: 40px 20px;
+  font-family: sans-serif;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-column h4 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons li {
+  list-style: none;
+}
+
+.social-icons a {
+  color: #333;
+  font-size: 20px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #777;
+}
+
+
+
+
